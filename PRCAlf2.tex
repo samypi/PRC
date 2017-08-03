@@ -114,10 +114,11 @@
 \newcommand{\nind}[1][]{\mathop{\mathpalette\nindsym{#1}}}
 
 
-\title{Stabilizers, Groups with f-generics in NTP$_2$ and PRC fields}
-\author{Samaria Montenegro\footnotemark[1] \and Alf Onshuus,\thanks{Partially supported by Colciencias grant number 120471250707}
+\title{Stabilizers, groups with f-generics in NTP$_2$ and PRC fields}
+\author{Samaria Montenegro\footnotemark[1] \and Alf Onshuus\thanks{Partially supported by Colciencias grant number 120471250707}
  \and Pierre Simon\footnote{Partially supported by ValCoMo
-(ANR-13-BS01-0006).}}
+(ANR-13-BS01-0006), NSF (grant DMS
+1665491), and the Sloan foundation.}}
 \date{}
 
 
@@ -139,20 +140,18 @@ fields. \end{abstract}
 
 
 This paper has three main parts, each of which, we believe may be
-of particular interest.
+of independent interest.
 
-Sections 2 and 3 are very much self contained, and they only
-require knowledge of the very basic concepts of model theory, all
-of which are contained in the introduction of \cite{HrPi}.
-
-Section \ref{SStabilizer} is devoted to study S1 ideals and
+Sections 2 is very much self contained, and only
+requires knowledge of basic concepts of model theory, all
+of which are contained for instance in the introduction of \cite{HrPi}.
+It is devoted to the study of S1 ideals and
 various versions of Hrushovski's Stabilizer Theorem (Fact
-\ref{fact_stab}). This theorem has repeatedly been used to find
-``large'' type definable subgroups in various contexts. Theorem
-\ref{th_babystab} is a weakening of Hrushovski's original theorem
-which allows what we feel is a simpler proof. Theorem
-\ref{th_stabilizer} on the other hand, weakens many of the
-hypothesis and we use it generalize several results in \cite{HrPi}
+\ref{fact_stab}). We prove two variations on it. Theorem
+\ref{th_babystab} is very close to Hrushovski's original theorem, but
+ allows what we feel is a simpler proof and more natural hypothesis. Theorem
+\ref{th_stabilizer} on the other hand, substantially weakens the
+hypothesis on the S1 ideal. We use it generalize several results in \cite{HrPi}
 and \cite{Ba} by proving an ``algebraic group chunk theorem''
 (Theorem \ref{algebraic group chunk}) in many geometric theories.
 Reading \cite{Ba} and conversations with Barriga made us realize
@@ -164,17 +163,16 @@ group $H$, a result we believe was previously unknown.
 In Section \ref{SGroups} we prove some results about groups
 definable in an NTP$_2$ theory admitting f-generic types. We
 generalize some basic statements proved in \cite{CS} for definably
-amenable NIP groups. We use Theorem \ref{th_babystab}, but for any
-reader familiar with Hrushovski's stabilizer theorem this section
+amenable NIP groups. Apart from the use of Theorem \ref{th_babystab}, this section
 is self contained.
 
-The rest of the paper is devoted to study groups definable in
+The rest of the paper is devoted to the study of groups definable in
 bounded PRC fields.
 
 A field is PRC if every absolutely irreducible variety which has
 zeros in every real closed extension has a zero in the field.
 Hence PRC fields generalize both the notions of real closed fields
-and of pseudo algebraically closed fields (PAC). It was shown in
+and of pseudo algebraically closed fields (PAC). It is shown in
 \cite{Mon} that bounded PRC fields are NTP$_2$, a notion which
 generalizes the better known concepts of dependent theories and
 simple theories.   Since bounded PAC fields have been a very
@@ -184,10 +182,9 @@ PRC fields appear to be examples of NTP$_2$ fields, the study of
 which might enable us to predict which properties can and cannot
 hold in an NTP$_2$ theory.
 
-In this paper we try to understand definable groups in a bounded
-PRC field, assuming in addition existence of f-generic types (a
-slightly weaker assumption than definable amenability). We prove
-that such a group is isogeneous with a finite index subgroup of a
+In Section \ref{STheorem} we try to understand definable groups in a bounded
+PRC field, assuming in addition existence of f-generic types. We prove
+that such a group is isogeneous to a finite index subgroup of a
 quantifier-free definable group (Theorem \ref{th_main}). In fact,
 this latter group admits a definable covering by multicells on
 which the group operation is algebraic. This generalizes similar
@@ -214,8 +211,7 @@ In Section \ref{SAlgebraic} we show that for any such $K$ (a type
 definable subgroup of and algebraic group), if $\overline{K}$
 denotes the topological closure of  $K$, then $\overline{K}/K$ is
 profinite. The proof then continues adapting the proofs in
-\cite{HrPi} for the pseudofinite case and for the real closed case
-to complete the proof of the bounded PRC case.
+\cite{HrPi} for the pseudofinite case and for the real closed case.
 
 
 \section{S1 ideals and Stabilizer theorems}\label{SStabilizer}
@@ -225,7 +221,7 @@ $\mu$ be an $M$-invariant ideal of definable subsets of $G$ which
 is invariant by left translations by elements of $G$. We say that
 a type $p(x)$ in $G$ is \emph{$\mu$-wide} if it is not contained
 in a set $D\in \mu$. If the ideal $\mu$ is fixed and no confusion
-can arise, we will $\mu$-wide types as ``wide''.
+can arise, we will refer to $\mu$-wide types as ``wide''.
 
 
 A key concept we will need is Hrushovski's definition of an S1
@@ -237,13 +233,13 @@ An $A$-invariant ideal $\mu$ has the S1 property if whenever $(
 a_j)_{j \in \omega}$ is an $A$-indiscernible sequence and
 $\phi(x,y)$ is a formula, then if $\phi(x,a_i)\wedge \phi(x,a_j)$
 is in $\mu$ for some/all $i\neq j$, then $\phi(x,a_i)$ is in $\mu$
-for some/any $i$.
+for some/all $i$.
 
 We will say that the ideal $\mu$ is S1 on the $A$-definable set
 $X$ if $X$ is not in $\mu$ and the property above holds for
 formulas $\phi(x,a_i)$ included in $X$. Finally, we say that $\mu$
 is S1 on a partial type $\pi(x)$ if $\pi(x)$ is $\mu$-wide and
-included in a definable set in which $\mu$ is S1.
+included in a definable set on which $\mu$ is S1.
 \end{defi}
 
 
@@ -277,8 +273,8 @@ for all $a\models p(x)$ and $b\models q(y)$ as long as either $\tp(a/Mb)$ or $\t
 
 The usefulness of S1 ideals can be seen in the following
 proposition (which we will use in Section \ref{ShelahExpPRC}). It
-is basically Lemma 6.1 in \cite{HrPi}, but since the contexts are
-not exactly the same we include the proof for completeness.
+is basically Lemma 6.1 in \cite{HrPi}, but the contexts are
+not exactly the same.
 
 \begin{defi}
 A \emph{definable ideal}, is defined to be an ideal $\mu$ such
@@ -351,7 +347,7 @@ $H\subseteq G_n \subseteq H_n$, so $H=\bigcap G_n$.
 
 
 A good insight for invariant and S1 ideals (which prompted some of
-the terminology we use) comes from measures. If we have an
+the terminology we use) comes from measures. If we have a finitely
 additive measure on definable sets which is invariant under
 automorphisms fixing some set $A$, a natural $A$-invariant ideal
 is that of sets of measure 0. In this context, \emph{wide} sets
@@ -361,15 +357,18 @@ intersect if the ambient universe has infinite measure. However,
 if we restrict ourselves to a finite measure set, then the ideal
 of measure 0 sets is in fact S1.
 
-Because of this analogy, given an ideal $\mu$ we will refer to the
-ideal of sets in which $\mu$ is S1 as \emph{medium}. Note that if
-$p$ is medium, then $\mu$ is S1 on $p$, and if $a\models p$ and
-$\tp(a/Mb)$ is wide, then $\tp(a/Mb)$ does not fork over $M$.
+Because of this analogy, given an ideal $\mu$ we will call a definable set $X$ \emph{medium}
+if  $\mu$ is S1 when restricted to $X$. Note that medium sets form an ideal.
+A type is medium if it concentrates on a medium set. If
+$p$ is medium and $a\models p$ with
+$\tp(a/Mb)$ wide, then $\tp(a/Mb)$ does not fork over $M$.
 
 \bigskip
 
+Recall that we assume the ideal $\mu$
+to be both $A$-invariant and invariant under translations by elements of $G$.
 If $q$ and $r$ are wide types, then we define $St(q,r):=\{g : gp
-\cap r$ is wide$\}$. If $p$ is wide, we will refer to $St(p,p)$ by
+\cap r$ is wide$\}$. If $p$ is wide, we will denote $St(p,p)$ by
 $St(p)$ and $St_r(p)= \{g : pg\cap p$ is wide$\}$. Hence $g\in
 St(p)$ if and only if there is some $a\models p$, $\tp(a/Mg)$ wide
 and $ga\models p$ (then also $\tp(ga/Mg)$ is wide by
@@ -392,8 +391,8 @@ Let $\mu$ be an $M$-invariant ideal on $G$ stable under left and right multiplic
 Then there is a wide type-definable subgroup $S$ of $G$. We have $S=(q^{-1}q)^2$ and $qq^{-1}q$ is a coset of $S$. Moreover $S$ is normal in the group generated by $X$ and $S\setminus (q^{-1}q)$ is included in a union of non-wide $M$-definable sets.
 \end{fact}
 
-We will not actually use this theorem, but some modified versions of it, which we prove in this section. Theorem \ref{th_babystab} below is very close to Fact \ref{fact_stab}. The proof is of course very much inspired, at times literally copied, from that of Hrushovski. The main difference is that we assume the ideal to be S1 on up to four products of the type and its inverse (instead of three), and this allows us to simplify slightly the arguments. Furthermore, we drop assumption (F) and under assumption (B1), we forgo right-invariance.
-%The only thing that is missing from the conclusion is the statement that $qq^{-1}q$ is a coset of $S$. For this, it seems that Hrushovski's full proof is required and we do not see any way to shorten his arguments.
+We will not actually use this theorem, but some modified versions of it, which we prove in this section. Theorem \ref{th_babystab} below is very close to Fact \ref{fact_stab}. The proof is of course very much inspired, at times literally copied, from that of Hrushovski. One difference is that we assume the ideal to be S1 on up to four products of the type and its inverse (instead of three), and this allows us to simplify slightly the arguments. On the other hand, we weaken the requirements by dropping assumption (F) and under assumption (B1), we forgo right-invariance.
+
 
 The proof in \cite{Hru12} operates by acting on the right on
 $q$, we decide to act on the left, which explains some differences
@@ -443,7 +442,7 @@ The first part follows from the previous lemma by taking $q,r$ there to be $p$ h
 We will also show the following.
 
 \begin{lemme}\label{repeatedClaim}
-Let $p$ and $r$ be medium types with $r(x)$ wide, let
+Let $p$ and $r$ be medium types with $r$ wide, let
 $(a,b)\models p \times_{nf} p$, and assume that $p^{-1}r$ is
 medium. Then $ba^{-1}\in St(r)$.
 \end{lemme}
@@ -466,7 +465,7 @@ Let $\mu$ be an $M$-invariant ideal on $G$ stable under left multiplication. Let
 \begin{description}
 \item[(B1)] For some symmetric definable set $X\in p$, $\mu$ is S1 on $X^4$;
 
-\item[(B2)] $\mu$ is S1 on $(pp^{-1})^2$ and invariant under (left and) right multiplication;
+\item[(B2)] $\mu$ is S1 on $(pp^{-1})^2$ and invariant under (left and) right multiplication.
 
 %\item[(F)] there are $a,b \models p$ such that $\tp(a/Mb)$ and $\tp(b/Ma)$ are both non-forking over $M$.
 
@@ -474,7 +473,7 @@ Let $\mu$ be an $M$-invariant ideal on $G$ stable under left multiplication. Let
 Then $Stab(p)=St(p)^2 = (pp^{-1})^2$ is a connected, wide type-definable group on which $\mu$ is S1. Furthermore $Stab(p)\setminus St(p)$ is included in a union of non-wide $M$-definable sets.
 \end{thm}
 \begin{proof}
-Here we take for $\lambda$ the ideal of all definable sets on which $\mu$ is S1, so a type is medium if $\mu$ is S1 on it. In particular, under either of (B1) or (B2), we have that both $p$ and $p^{-1}p$ are medium.
+Note that under either of (B1) or (B2), we have that both $p$ and $p^{-1}p$ are medium.
 
 The proof will proceed by a series of steps. Only in the beginning will there be differences depending on whether (B1) or (B2) is assumed.
 
@@ -614,19 +613,19 @@ on $(pp^{-1})^2$ and assume only that $\mu$ is S1 on
 The need for this will be clear in the next subsection, where we
 cannot require S1 in all of $p^{-1}p$.
 
-The second change is that after fixing $\mu$ we will need to
-restrict ourselves to something stronger than to medium sets. We
-therefore need to consider a second ideal $\lambda$ of subsets of
-$G$ which is contained in the ideal of medium sets (so with the
-property that $\mu$ is S1 on any set in $\lambda$). We will assume
+We manage to achieve this at the cost of introducing a technical
+assumption (A) for which we need to introduce a second ideal $\lambda$
+that will serve as a more restrictive notion of medium.
+We will assume
 that $\lambda$ is also invariant under left translations by
 elements of $G$. A type which is not $\lambda$-wide will be called
 \emph{$\lambda$-medium}. In Theorem \ref{algebraic group chunk},
 this restriction will be key in order to show that Condition (A)
-holds.
+holds. It seems plausible that for many, or all, ideals $\mu$, condition (A)
+holds with $\lambda$ being the ideal of all medium sets. We were
+however not able to prove any general statement of this kind.
 
-In exchange of this two relaxations, we will need to make extra
-technical hypotheses (A) and (F).
+
 
 \begin{thm}\label{th_stabilizer}
 Let $\mu$ and $\lambda$ be $M$-invariant ideals on $G$ as above,
@@ -653,19 +652,23 @@ Throughout this proof, we will refer to $\lambda$-medium as
 ``medium''.
 
 Condition (A) implies that if $q$ is a medium type, then both
-$St(q)$ and $St_r(q)$ are medium. And together with Condition (B)
+$St(q)$ and $St_r(q)$ are medium. Together with Condition (B)
 it also implies that $p^{-1}$ is medium.
 
 \medskip
 \noindent \underline{Claim 1}: If $(a,b)\in p \nf p$, then $ba^{-1}\in St(p)$.
 
-\noindent Proof: Let $r:=tp(a^{-1}b/M)$, which is medium by
+\noindent Proof: We have to prove that $ba^{-1}p\cap p$, or equivalently $a^{-1}p\cap b^{-1}p$, is wide.
+By stability, it is enough to prove this for some pair $(a,b)\in p\nf p$.
+Let $(a_i:i<\omega)$ be an indiscernible sequence in $p$ such that $\tp(a_i/Ma_{<i})$
+does not fork over $M$. Take $a=a_0$ and $b=a_1$.
+Let $r:=tp(a^{-1}b/M)$, which is medium by
 Condition (B). Also, since $tp(b/Ma)$ is wide and $\mu$ is left
 invariant we know that $tp(a^{-1}b/Ma)$ is wide. Now,
 $a^{-1}b\models a^{-1}p\cap r$ so $a^{-1}p\cap r$ is wide. Since
 $a,b$ start an  indiscernible sequence, by S1 we have that
 $a^{-1}p\cap b^{-1}p\cap r$ is wide, so $a^{-1}p\cap b^{-1}p$ is
-wide and by invariance $ba^{-1}p\cap p$ is wide as required.
+wide as required.
 
 \medskip
 \noindent \underline{Claim 1'}: If $(a,b)\in p \nf p$, then $a^{-1}b\in St_r(p)$.
@@ -684,7 +687,7 @@ Let $\mu'$ be the ideal defined by $\phi(x)\in \mu' \iff
 under left and right multiplication and is S1 on any inverse of a
 medium type. We will write $St'$, $Stab'$ for the stabilizers with
 respect to $\mu'$. Notice that since $p^{-1}$ is wide and medium,
-$p$ is $\mu'$-wide and medium.
+$p$ is $\mu'$-wide and $\mu'$ is S1 on $p$.
 
 Let $(a,b)\models p\times p$, $\tp(b/Ma)$ wide (hence non-forking
 over $M$) and $q=\tp(ab^{-1}/M)$. Then $q$ is $\mu'$-wide and is
@@ -723,7 +726,7 @@ St'(q)$.
 find $b\models q$ and some $a_0\models p$ with $\tp(b/Ma_0)$
 $\mu'$-wide $r= \tp(a_0^{-1}b/M)$ and its inverse are medium.
 
-Extending we can find a sequence $\langle a_i\rangle_{i\in
+Extending we can find a sequence $( a_i)_{i\in
 \kappa}$ such that $\tp(b/Ma_{<\kappa})$ is non forking and, since
 $\mu'$ is medium in $q$, $\tp(b/Ma_{<\kappa})$ is $\mu'$-wide. By
 Erdos-Rado  if we take $\kappa$ large enough we can find a
@@ -779,7 +782,7 @@ a_1q \cap r$ is wide, hence $a_0q \cap a_1 q$ is wide as required.
 \end{proof}
 
 
-\subsection{Applying the Stabilizer Theorem: Algebraic Group Chunks}
+\subsection{Applying the Stabilizer Theorem: algebraic group chunks}
 
 This section is devoted to proving that Theorem
 \ref{th_stabilizer} implies the existence of large algebraic
@@ -806,9 +809,9 @@ The following is Theorem 3.1 in \cite{HrPi}, which can be seen as
 an ``algebraic group configuration'' theorem.
 
 
-\begin{fait}
-Let $T$ be a theory in a language containing the language of rings
-which is algebraically bounded. Let $G$ be a group definable in a
+\begin{fait}\label{fact_groupconf_original}
+Let $T$ be a theory extending the theory of fields
+which is algebraically bounded. Let $G$ be a group definable in $T$
 over a set $A$, and let $a,b,c\in G$ be such that $a\cdot_G b=c$ and such that
 $a$ and $b$ are algebraically independent over $A$.
 
@@ -823,8 +826,8 @@ $\acl(Bb)=\acl(Bb')$ and $\acl(Bc)=\acl(Bc')$.
 We will prove the following, ``algebraic group chunk'' theorem.
 
 \begin{thm}\label{algebraic group chunk}
-Let $T$ be a theory in a language containing the language of rings
-which is algebraically bounded, and such that any model of $F$ is
+Let $T$ be a theory extending the theory of fields
+which is algebraically bounded and such that any model of $T$ is
 definably closed in its algebraic closure. Let $G$ be a group
 definable in a $\omega$-saturated model $M$ of $T$. Assume that
 $T$ admits an $M$-invariant ideal $\mu_G$ on $G$, stable under
@@ -834,13 +837,13 @@ that condition (F) holds: There are $(a,b)\models p \nf p$ such
 that $\tp(a/Mb)$ does not fork over $M$.
 
 Then there is an algebraic group $H$ and a definable finite-to-one
-group homomorphism from a type definable wide subgroup $D$ of $G$
+group homomorphism from a type-definable wide subgroup $D$ of $G$
 to $H(M)$.
 \end{thm}
 
-We will begin with the following proposition.
+We begin with the following proposition.
 
-\begin{lemme}\label{prop_groupconf}
+\begin{prop}\label{prop_groupconf}
 Let $T, \mu_G,p$ and $M$ be as in the statement of Theorem
 \ref{algebraic group chunk}. Let $\mathcal{U}$ a monster model of
 $M$. Let $a\models p|M$, $b\models p|Ma$, and $c=a\cdot_G b$. Then
@@ -849,15 +852,15 @@ algebraic group $H$ and dimension-generic elements $a', b', c'\in
 H(\mathcal{U})$ such that $a'\cdot b' = c'$ and
 $\acl(Ma)=\acl(Ma')$, $\acl(Mb)=\acl(Mb')$ and
 $\acl(Mc)=\acl(Mc')$.
-\end{lemme}
+\end{prop}
 
 
 \begin{proof}
 Let $A$ be the (finite) set of parameters over which $G$ is
 defined.
 
-We modified the statement to additionally require that the set $B$
-in the statement can be picked to be inside $M$. This is clear
+Note that compared to Fact \ref{fact_groupconf_original}, we require that the set $B$
+in the statement can be found inside $M$. This is clear
 throughout the proof in \cite{HrPi}, except maybe for the last
 base change. We will therefore recall the stage of the
 construction prior to the last base changes, and show why we can
@@ -916,7 +919,7 @@ chosen and $\tau_{2,1}$ would be an element of $H(\mathcal U)$.
 \begin{rem}
 Barriga \cite{Ba} dealt with the choice of $b_2$ in a different
 way in the context of bounded groups definable in real closed
-fields. However, her proof does not work with in the general
+fields. However, her proof does not work in the general
 context we are working with (specifically, it requires
 ``rosiness'' of $T$).
 \end{rem}
@@ -949,7 +952,7 @@ done.
 %This section is devoted to proving the following theorem.
 \begin{proof}[Proof of Theorem \ref{algebraic group chunk}]
 
-Let $a,b,c$ be as in the statement of Lemma \ref{prop_groupconf},
+Let $a,b,c$ be as in the statement of Proposition \ref{prop_groupconf},
 so that there is an $M$-definable algebraic group $(H, \cdot_H)$
 and $a', b', c' \in H$ such that $c'= a'\cdot_H b'$, $\acl(Ma)=
 \acl(Ma'), \acl(Mb)= \acl(Mb')$ and $\acl(Mc)= \acl(Mc')$.
@@ -957,48 +960,45 @@ and $a', b', c' \in H$ such that $c'= a'\cdot_H b'$, $\acl(Ma)=
 We define an ideal $\mu$ on $G \times H$, by saying that $D\in
 \mu$ if and only if $\pi_1(D)\in \mu_G$. Then $\mu$ is
 $M$-invariant and invariant under left and right translations. We
-will refer to $\mu$-wide as ``wide''. Note that because we have
-finite fibers, $\mu$ is S1 on medium types.
+will refer to $\mu$-wide as ``wide''.
 
 We define the ideal $\lambda$ as the set of subsets $X$ of
 $G\times H$ for which the projections to $G$ and $H$ each have
-finite fibers. Define $\widetilde{p}= \tp(a,a'/M)$. Then, because
+finite fibers. Thus $\lambda$ is included in the ideal of sets that are medium for $\mu$.
+As before, a set in $\lambda$ will be called $\lambda$-medium.
+Define $\widetilde{p}= \tp(a,a'/M)$. Then, because
 $(a,a')$ is interalgebraic with $a$ over $M$, $\widetilde{p}$ is
 wide and medium and Condition (F) holds for $\widetilde{p}$.
 
 We will show that conditions (A) and (B) of Theorem
-\ref{th_stabilizer} also hold with ideals $\mu$ and
+\ref{th_stabilizer} also hold with the ideals $\mu$ and
 $\lambda$\footnote{Notice that the product of two types with
-finite fibers does not necessarily have finite fibers. And since
-we can only control S1 property because we are projecting with
-finite fibers to a set where we do have S1, it is because of this
-that given a medium type $p$ we cannot hope to have the S1
-property in all of $pp^{-1}$. This is the reason why we need to
-apply Theorem \ref{th_stabilizer} where we only require S1 for
-generic multiplications of fibers.}.
+finite fibers does not necessarily have finite fibers.
+Hence we do not know that $pp^{-1}$ is medium.
+This explains the need for the restrictive hypothesis on $p\times_{nf} p$ in Theorem \ref{th_stabilizer}}.
 
 \begin{claim}
 Condition (A) holds: If $p,q$ are two types in $G\times H$ and we
 have $(g,h)\models p\times_{nf} q$ such that either $\tp(gh/M)$ or
-$\tp(hg/M)$ is medium, then $p$ is medium.
+$\tp(hg/M)$ is $\lambda$-medium, then $p$ is $\lambda$-medium.
 \end{claim}
 
 \begin{claimproof}
 Denote $g=(g_0,g_1)$ and same for $h$. We will prove the case
-where we assume that $\tp(gh/M)$ is medium, the other case is
+where we assume that $\tp(gh/M)$ is $\lambda$-medium, the other case is
 proved in an analogous way. Since $g_0h_0 \in \acl(Mg_1h_1)$ we
 have $g_0 \in \acl(Mg_1h_0h_1)$. As $\tp(h_0h_1/Mg_0g_1)$ does not
 fork over $M$, this implies that $g_0 \in \acl(Mg_1)$. In the same
 way we get $g_1 \in \acl(Mg_0)$.
  \end{claimproof}
 
-By Lemma \ref{lem_stqr}, condition (B) holds.So we can then apply
+By Lemma \ref{lem_stqr}, condition (B) holds. We can then apply
 Theorem \ref{th_stabilizer}, which gives us a connected,  medium,
 wide type-definable group $K\leq G\times H$. As $K$ is medium, its
 projections to $G$ and $H$ have finite fibers. As $K$ is wide,
 $\pi_1(K)$ is $\mu_G$-wide.
 
-So we only need to show that we may assume that $\pi_1$ is
+It only remains to show that we may assume that $\pi_1$ is
 injective on $K$.
 
 Let $K_1 = \pi_1^{-1}(e)\cap K$. Then $K_1$ is finite and normal
@@ -1010,10 +1010,10 @@ replace $H$ by $C/\pi_2(K_1)$ which is again an algebraic group
 (defined over the same parameters as $H$ and $K_1$). Thus we may
 assume that $K_1$ is trivial. % Hence from now on, we assume that $\pi_1$ and $\pi_2$ are injective on $K$.
 
-This completes the proof of the Theorem
+This completes the proof of the theorem
 \end{proof}
 
-An easy corollary of the Theorem is the following result which we
+An easy corollary of the theorem is the following result which we
 believe was not known.
 
 \begin{cor}
@@ -1023,14 +1023,14 @@ definable subgroup of an algebraic group.
 \end{cor}
 
 \begin{proof}
-Any torsion free definable group is solvable, so it is amenable as
+Any torsion free definable group definable in an o-minimal structure is solvable, so it is amenable as
 a discrete group, and therefore definably amenable. By results in
-\cite{CS} we know that $G$ admits a by-f-generic type, and if we
+\cite{CS} we know that $G$ admits a bi-f-generic type, and if we
 define $\mu_G$ as the ideal of formulas which do not extend to
 bi-f-generic types, then $\mu_G$ is $M$-invariant for some model
-$M$, stable under left and right multiplication, and such that
+$M$, stable under left and right multiplication. Futhermore
 $\mu_G$ is S1 in $G$ and any wide subgroup must contain $G^{00}$
-(see Definition \ref{defG00}). We will reprove this results in the
+(see Definition \ref{defG00}). We will reprove those facts in the
 more general context of NTP$_2$ theories in Section \ref{SGroups}.
 
 Condition (F) holds in any dependent theory, so in particular it
@@ -1348,7 +1348,7 @@ Let $H<G$ be a type-definable group. Assume that $H$ is $\mu$-wide ({\it i.e.}, 
 Let $X$ be a definable set containing $H$. Then there is a definable set $Y$ containing $H$ such that $YY^{-1} \subseteq X$. By hypothesis, $Y$ is f-generic and the previous lemma implies that $YY^{-1}$ is generic and therefore $X$ is generic.
 \end{proof}
 
-In the following statement, $\mu_M$ is the ideal of formulas which do not extend to a global type, strongly f-generic over $M$.
+In the following statement, $\mu_M$ is the ideal of formulas which do not extend to a global type, strongly f-generic over $M$. Recall that $G^{00}_M$ is the smallest subgroup of $G$ which is type-definable over $M$ and of bounded index. Similarly, $G^{\infty}_M$ is the smallest subgroup of $G$ which is $M$-invariant and of bounded index.
 
 \begin{thm}\label{th_stab}\
 Assume that $G$ has strong f-generics. Let $p\in S_G(M)$ be f-generic.
@@ -1948,7 +1948,7 @@ We define $M_N$ to be the structure in the language $\mathcal{L}^*$
 whose universe is $M$ and where each $R_C$ and each $P_D$ are interpreted as:
 \begin{enumerate}
 \item for every $\bar{a} \in M, M_N \models R_C(\bar{a})$ if and only if $\mathcal{U} \models \bar{a} \in C$,
-\item for every $\bar{a} \in M, M_N \models P_D(\bar{a})$ if and only if $M \models \bar{a} \in D$
+\item for every $\bar{a} \in M, M_N \models P_D(\bar{a})$ if and only if $M \models \bar{a} \in D$.
 \end{enumerate}
 
 \end{defi}
@@ -2010,7 +2010,7 @@ By Proposition \ref{UniformDecom}, we may assume that $D$ is $\tau$-dense in som
 The structure $M_N$ is NTP$_2$.
 \end{cor}
 \begin{proof}
-This follows from Theorem \ref{th_shelahexp} proved in appendix.
+This follows from Theorem \ref{th_shelahexp} proved in the appendix.
 \end{proof}
 
 
@@ -2147,9 +2147,9 @@ each $j$ we have that $\phi(x,a_j) \cup p$ is consistent.
 Let $c_1$ and $c_2$ be such that $c_1 \models \phi(x, a_1) \cup p$, and $c_2 \models \phi(x, a_2) \cup p$, and such that $c_1$ and $c_2$ are algebraically independent over $\{a_1, a_2\}$.
 By Fact \ref{thamalgamation} $ \tp(c_1/a_1) \cup \tp(c_2/a_2) \cup p$ is consistent.
 It follows that $\phi(x, a_1) \cup \phi(x, a_2) \cup p$ is consistent, and by $\tau$-completeness of $p$ we have
-\[\overline{\phi(x, a_1) \cap \phi(x, a_2)} \in p.\]
+\[\overline{\phi(x, a_1) \wedge \phi(x, a_2)} \in p.\]
 
-By indiscernibility \[\overline{\phi(x, a_i) \cap \phi(x, a_j)} \in p\] for all $i \not = j$, so $\phi(x, a_i) \cap \phi(x, a_j) \not \in \mu$, for all $i \not = j$.
+By indiscernibility \[\overline{\phi(x, a_i) \wedge \phi(x, a_j)} \in p\] for all $i \not = j$, so $\phi(x, a_i) \wedge \phi(x, a_j) \not \in \mu$, for all $i \not = j$.
 \end{claimproof}
 
 Now, ${\overline{H \cap K}}\in p$ so that $H \cap K$ is
@@ -2226,7 +2226,7 @@ multi-semialgebraic.
 \begin{thm}\label{th_main}
 Let $M \models T_{prc}$ be $\omega$-saturated. Let $G$ be an
 $M$-definable group with strong f-generics. Then there is a finite
-index $M$-definable subgroup $G_1 \leq G$, and a finite $K\leq
+index $M$-definable subgroup $G_1 \leq G$, a finite $K\leq
 G_1$ central in $G_1$, and an algebraic group $H$ such that there
 is a local group homomorphism from a generic subset $W_1^*$ of
 $G_1$ and a ``finite index'' subset of a $\tau$-open neighborhood
@@ -2281,7 +2281,7 @@ As $K$ is wide, $\pi_1(K)$ is $\mu_M$-wide and hence by connectedness $\pi_1(K)=
 \end{comment}
 
 As in the proof of \ref{algebraic group chunk}, we can assume that $\pi_2$ are injective on $K$ (otherwise
-we can replace $G$ by $G/\pi_2(K_2)$ where $K_2$ $K_2 = \pi_2^{-1}(e)\cap K$).
+we can replace $G$ by $G/\pi_2(K_2)$ where $K_2 = \pi_2^{-1}(e)\cap K$).
 
 
 Now choose a symmetric definable $X_0$ such that $K \subseteq X_0
@@ -2324,7 +2324,7 @@ set $X \subseteq \pi_2(X_0)$  such that $K_H':= X \cap
 \overline{K_H}$ is a subgroup of finite index  of
 $\overline{K_H}$, and $(K_H')^*$ is a type-definable subgroup of
 bounded index of $G$ ($G^{00}_M \subseteq (K_H')^*$). By passing
-to a finite index subgroup of $G$, we may assume that $(X)^*$
+to a finite index subgroup of $G$, we may assume that $X^*$
 generates $G$.
 
 \begin{claim}
@@ -2379,7 +2379,7 @@ isomorphic to $G$ which can be covered by finitely many copies
 $W_i$ of $U_3\cap X$, then look at the ``open closure'' $W_i^{cl}$
 of each $W_i$ which will be isomorphic to $U_3$, and finally, we
 will induce a group structure on the ``corresponding'' group
-$\overline W^{cl}/E^{cl}$ which will then give us the group $H'$
+$ W^{cl}/E^{cl}$ which will then give us the group $H'$
 as in the statement of the theorem.
 
 
@@ -2557,7 +2557,10 @@ Let $T$ be NTP$_2$ in a language $L$ and assume that we have an expansion $T'$ o
 \begin{proof}
 Let $M\models T'$ be $\aleph_1$-saturated and let $M\prec N$ be $|M|^+$-saturated. The property of NTP$_2$ for formulas is preserved by finite disjunctions, but not by finite conjunctions in general. It is enough to show that a formula of the form $\phi(x;y)\wedge \psi(x;y)$ is NTP$_2$, where $\phi(x;y)\in L$ and $\psi(x;y) \in L'$ is such that there is an NIP $L$-formula $\tilde \psi(x;y;d)\in L(N)$ such that $\psi(M)=\tilde \psi(N;d)\cap M$. Let $(N,M)$ denote the expansion of $N$ with a new unary predicate naming $M$. Let $(N_1,M_1)\succ (N,M)$ be a sufficiently saturated elementary extension. By Proposition 1.7 in \cite{ChSi2}, there is $\theta(x,y;e)\in L(M_1)$ such that $\theta(M;e)=\psi(M)$ and $\theta(M_1;e)\subseteq \tilde \psi(M_1;d)$. Note that the formula $\theta(x,y;e)$ could have IP.
 
-Now assume that we are given a witness of TP$_2$ for $\phi(x;y)\wedge \psi(x;y)$. Namely, we have an array $(b_{i,j}:i,j<\omega)$ and some $k$ such that each line $\{\phi(x;b_{i,j_0})\wedge \psi(x;b_{i,j_0}):i<\omega\}$ is $k$-inconsistent and for every $\eta:\omega \to \omega$, the path $\{\phi(x;b_{\eta(j),j})\wedge \psi(x;b_{\eta(j),j}):j<\omega\}$ is consistent, hence realized by some $a_\eta\in M$. Now the properties of the array are preserved if we replace the formula $\phi(x;y)\wedge \psi(x;y)$ by $(\phi(x,y)\wedge \theta(x,y;e)$: the paths are still consistent, using the same witnesses $a_\eta$, and the lines are still $k$-inconsistent (in the structure $M_1$), again using Proposition 1.7 in \cite{ChSi2}. This shows that the formula $\phi(x,y)\wedge \theta(x,y;e)$ has TP$_2$ in $M_1$ which contradicts the hypothesis that $T$ is NTP$_2$.
+Now assume that we are given a witness of TP$_2$ for $\phi(x;y)\wedge \psi(x;y)$. Namely, we have an array $(b_{i,j}:i,j<\omega)$ and some $k$ such that each line $\{\phi(x;b_{i,j_0})\wedge \psi(x;b_{i,j_0}):i<\omega\}$ is $k$-inconsistent and for every $\eta:\omega \to \omega$, the path $\{\phi(x;b_{\eta(j),j})\wedge \psi(x;b_{\eta(j),j}):j<\omega\}$ is consistent, hence realized by some $a_\eta\in M$.
+Note that by elementarity of the extension $(N_1,M_1)\succ (N,M)$, for each $i$, the intersection of any $k$ formulas in
+ $\{\phi(x;b_{i,j_0})\wedge \tilde \psi(x,b_{i,j_0};d):i<\omega\}$ with $M_1$ is empty.
+Now the properties of the array are preserved if we replace the formula $\phi(x;y)\wedge \psi(x;y)$ by $\phi(x,y)\wedge \theta(x,y;e)$: the paths are still consistent, using the same witnesses $a_\eta$, and the lines are $k$-inconsistent (in the structure $M_1$) since $\theta(M_1;e)\subseteq \tilde \psi(M_1;d)$. This shows that the formula $\phi(x,y)\wedge \theta(x,y;e)$ has TP$_2$ in $M_1$ which contradicts the hypothesis that $T$ is NTP$_2$.
 \end{proof}
 
 %\bibliographystyle{apalike}
